@@ -135,6 +135,9 @@ TW_HAS_EDL_MODE := true
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 
+# System-as-root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/recovery/security/miui
