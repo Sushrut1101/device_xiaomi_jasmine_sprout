@@ -5,7 +5,7 @@
 /cache                  auto       /dev/block/bootdevice/by-name/cache         flags=display="Cache";wipeingui
 /system                 ext4       /dev/block/bootdevice/by-name/system        flags=slotselect;backup=1;display="System"
 /system_image           emmc       /dev/block/bootdevice/by-name/system        flags=slotselect;backup=1;flashimg=1;display="System Image"
-/vendor                 ext4       /dev/block/bootdevice/by-name/vendor        flags=slotselect;backup=1;display="Vendor"
+/vendor                 ext4       /dev/block/bootdevice/by-name/vendor        flags=slotselect;backup=1;display="Vendor";wipeingui
 /vendor_image           emmc       /dev/block/bootdevice/by-name/vendor        flags=slotselect;backup=1;flashimg=1;display="Vendor Image"
 /data                   ext4       /dev/block/bootdevice/by-name/userdata      flags=backup=1;encryptable=footer;fileencryption=ice:aes-256-cts
 /misc                   emmc       /dev/block/bootdevice/by-name/misc
