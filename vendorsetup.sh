@@ -69,6 +69,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # -- add settings for R11 --
         export FOX_R11=1
 	export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
+	export OF_MAINTAINER="Dark_4343"
+	export OF_MAINTAINER_AVATAR="misc/Dark_4343.png"
         # -- end R11 settings --
 
 	# run a process after formatting data to work-around MTP issues
@@ -78,6 +80,25 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_SCREEN_H=2160
         export OF_STATUS_INDENT_LEFT=48
         export OF_STATUS_INDENT_RIGHT=48
+	
+    	if [ -n "$OF_MAINTAINER_AVATAR" ]; then
+        	if [ ! -f "$OF_MAINTAINER_AVATAR" ]; then
+              		# some colour codes
+              		RED='\033[0;31m'
+              		GREEN='\033[0;32m'
+              		ORANGE='\033[0;33m'
+              		BLUE='\033[0;34m'
+              		PURPLE='\033[0;35m'
+              		echo -e "${RED}-- File \"$OF_MAINTAINER_AVATAR\" not found  ...${NC}"
+              		echo -e "${ORANGE}-- Downloading...${NC}"
+	      		if [ -f misc/ ]; then
+	      			mv misc/ misc-old/
+              		git clone https://github.com/OrangeFoxRecovery/avatar.git misc/
+              		echo -e "${BLUE}-- Successfully Downloaded the Avatar Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
+              		echo -e "${PURPLE}-- Using A Custom Maintainer Avatar from the Downloaded Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
+              		echo -e "${GREEN}-- Done!"
+        	fi
+    	fi
 
 	# let's log what are the build VARs that we used
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
