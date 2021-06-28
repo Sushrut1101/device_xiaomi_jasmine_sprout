@@ -93,6 +93,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
               		echo -e "${ORANGE}-- Downloading...${NC}"
 	      		if [ -f misc/ ]; then
 	      			mv misc/ misc-old/
+			fi
               		git clone https://github.com/OrangeFoxRecovery/avatar.git misc/
               		echo -e "${BLUE}-- Successfully Downloaded the Avatar Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
               		echo -e "${PURPLE}-- Using A Custom Maintainer Avatar from the Downloaded Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
@@ -108,9 +109,4 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
   	   export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
   	   export | grep "PLATFORM_" >> $FOX_BUILD_LOG_FILE
   	fi
-
-	add_lunch_combo omni_"$FDEVICE"-eng
-	add_lunch_combo omni_"$FDEVICE"-user
-	add_lunch_combo omni_"$FDEVICE"-userdebug
 fi
-#
