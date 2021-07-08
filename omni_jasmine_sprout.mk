@@ -26,7 +26,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_NAME := omni_jasmine_sprout
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi MI A2
+PRODUCT_MODEL := Mi A2
 PRODUCT_MANUFACTURER := Xiaomi
 
 # enable stock zip packages flash
