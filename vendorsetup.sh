@@ -40,9 +40,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
    	export OF_AB_DEVICE=1
-   	export TARGET_DEVICE_ALT="jasmine_sprout"
+   	export TARGET_DEVICE_ALT="jasmine_sprout,jasmine"
 	export OF_TARGET_DEVICES="jasmine_sprout,jasmine"
-	export FOX_RESET_SETTINGS="disabled"
+	export OF_PATCH_AVB20=1
    	export FOX_USE_BASH_SHELL=1
    	export FOX_ASH_IS_BASH=1
    	export FOX_USE_NANO_EDITOR=1
@@ -57,17 +57,20 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export OF_USE_SYSTEM_FINGERPRINT="1"
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-21.4.zip
-	export OF_USE_GREEN_LED=0
+	export OF_USE_GREEN_LED=1
 
-	# MIUI
-	export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
+	# OTA
+    export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+    export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=0
+    export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
 
 	# dm-verity/forced-encryption
 	export OF_KEEP_DM_VERITY=1
    	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 
         # -- add settings for R11 --
-        export FOX_R11=1
+    export FOX_R11=1
 	export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 	export OF_MAINTAINER="Dark_4343"
 	export OF_MAINTAINER_AVATAR="misc/Dark_4343.png"
