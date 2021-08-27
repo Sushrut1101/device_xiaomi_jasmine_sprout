@@ -58,6 +58,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_SYSTEM_FINGERPRINT="1"
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-21.4.zip
 	export OF_USE_GREEN_LED=1
+	
+	# About Settings
+    export FOX_VERSION="R11.1_2"
+    export FOX_BUILD_TYPE="Stable"
 
 	# OTA
     export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
