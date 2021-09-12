@@ -66,3 +66,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
     android.hardware.boot@1.0-service \
 #    
+
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+#
