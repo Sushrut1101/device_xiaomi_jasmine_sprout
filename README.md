@@ -28,7 +28,7 @@ Front Camera   | 20 MP
   /*
   *  Copyright (C) 2013-2020 The TWRP
   *
-  *  Copyright (C) 2019-2020 The OrangeFox Recovery Project
+  *  Copyright (C) 2019-2021 The OrangeFox Recovery Project
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
